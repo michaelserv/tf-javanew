@@ -2,6 +2,29 @@
 
 Terraform code to create [Msk Kafka Cluster](https://aws.amazon.com/msk/) resource on AWS.
 
+## Built with:
+
+* Terraform (v0.13.0)
+* AWS_ACCESS_KEYS and AWS_SECRET_ACCESS_KEYS are set as environment variables (link: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+### Step by Step deployment
+* **Step 1: Clone the Repo.**. This command will clone the repo
+```shell script
+$ git clone https://github.com/antonio-rufo/tf-javanew.git
+```
+
+* **Step 2: Update the `variables.tf` file to include your vpc_id (line 48), msk_subnet_ids (line 54), and msk_security_group_ids (line 60).**
+```shell script
+$ cd tf-javanew
+$ vi variables.tf
+```
+* **Step 3: Create the resources.**
+```shell script
+$ terraform init
+$ terraform plan
+$ terraform apply --auto-approve
+```
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
